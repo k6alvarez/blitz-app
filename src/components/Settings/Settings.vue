@@ -1,5 +1,5 @@
 <template>
   <section>
-    <h1>Events</h1>
+    <h1>Blitz Settings</h1>
   </section>
 </template>
