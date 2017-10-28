@@ -61,4 +61,45 @@ a {
 section {
   padding: 7px 10px;
 }
+
+button, .button {
+  padding: 3px 15px;
+  margin: 0;
+  max-height: 25px;
+  color: white;
+  border: 0;
+  background: #42b983;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.flex-column-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .button, button {
+    margin-bottom: 10px;
+    max-width: 200px;
+  }
+}
+
+
+.team-events {
+  li {
+    display: flex;
+    border: 1px solid #d9d9d9;
+    border-top: 0;
+    cursor: default;
+    padding: 7px 10px;
+    margin: 0;
+
+    &:first-child {
+      border-top: 1px solid #d9d9d9;
+    }
+  }
+}
+
 </style>

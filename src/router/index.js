@@ -5,6 +5,7 @@ import Events from '@/components/Events/Events'
 import Teams from '@/components/Teams/Teams'
 import Profile from '@/components/Profile/Profile'
 import Settings from '@/components/Settings/Settings'
+import CreateBlitz from '@/components/CreateBlitz/CreateBlitz'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/settings',
       name: 'Settings',
       component: Settings
+    },
+    {
+      path: '/blitz/create',
+      name: 'Create Blitz',
+      component: CreateBlitz
     }
   ]
 })
