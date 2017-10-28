@@ -73,6 +73,7 @@
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "ora": "^1.2.0",
     "rimraf": "^2.6.0",
+    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.0.4",
     "vue-style-loader": "^3.0.1",
