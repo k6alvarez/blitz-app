@@ -2,7 +2,7 @@
   <div id="app">
     <app-header></app-header>
     <div class="app__content">
-      <router-view></router-view>
+      <router-view :user="user" :markers="markers"></router-view>
     </div>
     <app-footer></app-footer>
   </div>
@@ -14,7 +14,23 @@ import AppHeader from './components/AppHeader'
 
 export default {
   name: 'app',
-  components: { AppFooter, AppHeader }
+  components: { AppFooter, AppHeader },
+  data () {
+    return {
+      user: {
+        firstName: 'Bender',
+        lastName: 'Rodriguez',
+        email: 'kenny@boomersstudio.com',
+        address: '442 Allen Rd NE',
+        address2: 'Apt B',
+        city: 'Atlanta',
+        state: 'GA',
+        lat: 33.748954,
+        lng: -84.388133
+      },
+      markers: []
+    }
+  }
 }
 </script>
 
@@ -62,9 +78,13 @@ section {
   padding: 7px 10px;
 }
 
+input {
+  font-size: 14px;
+}
+
 button, .button {
   padding: 3px 15px;
-  margin: 0;
+  margin: 5px 0;
   max-height: 25px;
   color: white;
   border: 0;
@@ -102,4 +122,18 @@ button, .button {
   }
 }
 
+.blitz-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.blitz-section--centered {
+  justify-content: center;
+}
+
+.blitz-section--hide {
+  display: none;
+}
 </style>

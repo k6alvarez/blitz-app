@@ -6,24 +6,23 @@
       <div>Atlanta United</div>
     </div>
     <div class="blitz-section">
-      <div>Choose Your Location</div>
-      <div>123 Atlanta St</div>
-    </div>
-    <div class="blitz-section">
-      <div>Choose Your Venue</div>
-      <div>Taco Mac</div>
-    </div>
-    <div class="blitz-section">
-      <div>Enter Message</div>
+      <div>Enter Watch Party Message</div>
       <textarea></textarea>
     </div>
-    <button>Create Blitz</button>
+    <blitz-map v-bind:user="user" v-bind:lat="user.lat" v-bind:lng="user.lng" v-bind:hideLocationOptions="true" v-bind:markers="markers"></blitz-map>
   </section>
 </template>
 
-<style lang="scss" scoped>
-.blitz-section {
-  display: flex;
-  justify-content: space-between;
+<script>
+import BlitzMap from '../BlitzMap/BlitzMap'
+
+export default {
+  name: 'create-blitz',
+  components: { BlitzMap },
+  props: ['user', 'markers']
 }
+</script>
+
+<style lang="scss">
+
 </style>
